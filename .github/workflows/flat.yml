@@ -1,0 +1,53 @@
+name: data
+on:
+  schedule:
+    - cron: 0 16 * * *
+  workflow_dispatch: {}
+  push:
+    paths:
+      - .github/workflows/flat.yml
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup deno
+        uses: denoland/setup-deno@main
+        with:
+          deno-version: v1.x
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://datastore.thenewslens.com/infographic/covid-19-data/tw-counties.csv
+          downloaded_filename: tw-counties.csv
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://datastore.thenewslens.com/infographic/covid-19-data/live/tw-counties.csv
+          downloaded_filename: live/tw-counties.csv
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://datastore.thenewslens.com/infographic/covid-19-data/live/tw-vac-counties.csv
+          downloaded_filename: live/tw-vac-counties.csv
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://datastore.thenewslens.com/infographic/covid-19-data/live/tw-vac.csv
+          downloaded_filename: live/tw-vac.csv
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://datastore.thenewslens.com/infographic/covid-19-data/live/tw.csv
+          downloaded_filename: live/tw.csv
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://datastore.thenewslens.com/infographic/covid-19-data/rolling-averages/tw-counties.csv
+          downloaded_filename: rolling-averages/tw-counties.csv
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://datastore.thenewslens.com/infographic/covid-19-data/vaccination/tw-vac-counties.csv
+          downloaded_filename: vaccination/tw-vac-counties.csv
