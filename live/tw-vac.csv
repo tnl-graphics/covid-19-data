@@ -1,2 +1,2 @@
-date,new_vacs,total_vacs,doses_delivered
-2021-06-08,13247,743578,724900
+date,new_vacs,total_vacs,doses_delivered,total_vac_rate
+2021-06-09,12748,759746,796400,Inf
