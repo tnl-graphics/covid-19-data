@@ -1,9 +1,10 @@
 county,new_cases,date
-高雄市,8,NA
-宜蘭縣,4,NA
-桃園市,3,NA
+新北市,1,NA
+桃園市,6,NA
+台南市,2,NA
+高雄市,4,NA
 台北市,0,NA
-新北市,0,NA
+宜蘭縣,0,NA
 彰化縣,0,NA
 基隆市,0,NA
 台中市,0,NA
@@ -11,7 +12,6 @@ county,new_cases,date
 苗栗縣,0,NA
 新竹市,0,NA
 雲林縣,0,NA
-台南市,0,NA
 屏東縣,0,NA
 嘉義市,0,NA
 嘉義縣,0,NA
